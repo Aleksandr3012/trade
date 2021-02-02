@@ -14,7 +14,7 @@
 
 body,
 html {
-
+	letter-spacing: rem(-0.1);
 	font-size: var(--fontSizeBase);
 	// @include font-size(1rem);
 	// overflow-x: hidden;
@@ -85,25 +85,32 @@ body {
 }
 
 // .main-wrapper { 
-// 	display: flex;
-// 	flex-direction: row; 
-// 	// overflow: scroll;
-// 	// width: 100%; 
-// 	// height: 100vh;
-// 	// height: calc(var(--vh, 1vh) * 100);
+	// display: flex;
+	// flex-direction: row; 
+	// overflow: scroll;
+	// width: 100%; 
+	// height: 100vh;
+	// height: calc(var(--vh, 1vh) * 100);
 	
 	
 // }
-// .main-wrapper__inner{
-// 	// overflow-x: hidden;
-// 	display: flex;
-// 	flex-direction: column;
-// 	min-width: 0;
-// 	min-height: 100vh;
-// 	flex-grow: 1;
-// }
+.main-wrapper__inner{
+	// overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-width: 0;
+	min-height: 100vh;
+	flex-grow: 1;
+}
 
+h2 {
+	font-weight: 900;
 
+	span {
+		color: $secondary;
+	}
+}
 
 
 
@@ -279,9 +286,9 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	// background-color: var(--swiperBgDef);
+	// border: 2px solid var(--swiperBorderColorDef);
+	// color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -289,22 +296,27 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 
 	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
+		// background-color: var(--swiperBgDefHover);
+		// border-color: var(--swiperBorderColorDefHover);
 		color: var(--swiperColorDefHover);
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(72);
 	}
 
 	&::after {
 		display: none;
-	} 
+	}
+
+	@include media-breakpoint-up(lg) {}
+
+
+	// --swiperArrowPosition: -15px; 
 	&-next {
 		right: var(--swiperArrowPosition);
 	}
@@ -456,5 +468,21 @@ iframe {
 
 	&::-webkit-scrollbar-button {
 		display: none
+	}
+}
+
+.btn-primary {
+	box-shadow: 0px 4px 35px rgba(255, 61, 0, 0.51), 0px 4px 0px #C65300;
+	color: #fff !important;
+	font-weight: 600;
+	font-size: $h5-font-size;
+	letter-spacing: rem(-0.1);
+	line-height: normal;
+}
+
+
+.swiper-pagination {
+	.swiper-pagination-bullet-active {
+		background-color: $primary;
 	}
 }

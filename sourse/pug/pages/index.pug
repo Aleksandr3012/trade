@@ -3,11 +3,25 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sFact/_sFact.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sDocuments/_sDocuments.pug
+include ../blocks/sOnline/_sOnline.pug
+include ../blocks/sFeatures/_sFeatures.pug
+include ../blocks/sSchedule/_sSchedule.pug
+include ../blocks/sBonuses/_sBonuses.pug
+include ../blocks/sTarifs/_sTarifs.pug
+include ../blocks/sRews/_sRews.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sGaranty/_sGaranty.pug
+include ../blocks/sGoldenLevel/_sGoldenLevel.pug
+include ../blocks/sQuestions/_sQuestions.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Онлайн-тренинг'
 	title= title
 block pagecontent
 
@@ -15,8 +29,26 @@ block pagecontent
 	+header()
 		+top-nav()
 		+headerBlock()
-	+sForm()
-	+sContact()
+	+sFact
+	+sVideo
+	+sAbout
+	+sVideo2
+	+sVideo3
+	+sDocuments
+	.bg-light
+		+sOnline
+		+sFeatures
+	+sSchedule
+	+sBonuses
+	+sTarifs
+	+sRews
+	.bg-light
+		+sTeam
+		+sGaranty
+		+sGoldenLevel
+	+sQuestions
+	.bg-light
+		+sTarifs-sm
 	+footer()
 
 

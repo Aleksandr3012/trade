@@ -1,10 +1,15 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.bg.d-none.d-md-block(src="img/svg/header-bg.svg", alt="")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			+b.section-title
+				h4 Онлайн-тренинг
+				h1 Торгуем с крупным игроком
 
-			.row
-						
+			+e.block
+				h5 Система аттестованного специалиста финансовых рынков #[span Елены Прониной] для прибыльной торговли фьючерсами на Чикагской товарной бирже CME, валютами на&nbsp;рынке FOREX, а&nbsp;также фьючерсами на&nbsp;Московской бирже
+				+e.btn(href="#sTarifs") Записаться на тренинг
+				+pic('header-img.png')(class="headerBlock__phone")
+
 	// end headerBlock

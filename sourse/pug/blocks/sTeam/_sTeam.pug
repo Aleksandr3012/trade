@@ -1,0 +1,20 @@
+mixin sTeam(data)
+	// start sTeam
+	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Наша команда
+				h5 Для Вашего удобства и&nbsp;максимального результата мы&nbsp;разделили программу обучения на&nbsp;несколько этапов
+			.row
+				mixin item(i,t,p)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							+pic(`team-${i}.jpg`,'',0)
+							+e.caption
+								+e.title= t
+								p= p
+				+item('1','Анатолий Белоусов','Основатель Инфо-ДВД')
+				+item('2','Никита Королёв','Руководитель Инфо-ДВД')
+				+item('3','Елена Пронина','Автор Инфо-ДВД')
+				+item('4','Артём Дудкевич','Топ-менеджер Инфо-ДВД')
+	// end sTeam

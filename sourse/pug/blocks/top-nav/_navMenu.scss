@@ -1,7 +1,9 @@
 .navMenu{
-	display: flex;
+	@include media-breakpoint-up(md) {
+		display: flex;
+	}
 	list-style: none;
-	@include roww(20px);
+	@include roww(39px);
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
@@ -9,6 +11,8 @@
 	&__link{
 		display: block;
 		text-align: center;
-		padding: rem(20) rem(10);
+		color: $body-color;
+		font-weight: 600;
+		text-decoration: none;
 	}
 }

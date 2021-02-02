@@ -1,0 +1,56 @@
+// start .sFact
+.sFact {
+	--sPB: #{rem(0)};
+	--sPT: #{rem(30)};
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(100)};
+	}
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(165)};
+		--sTPB: #{rem(30)};
+	}
+
+	h2 {
+		font-weight: 900;
+	}
+
+	h3, h5, h4 {
+		max-width: 1020px;
+		letter-spacing: rem(-0.2);
+	}
+
+	h3 {
+		line-height: 150%;
+		margin-bottom: 1.7rem;
+	}
+
+	h4 {
+		line-height: 150%;
+		margin-bottom: 1.8rem;
+	}
+
+	h5 {
+		font-weight: 300;
+		line-height: 170%;
+		margin-bottom: 1.9rem;
+
+		strong {
+			line-height: 145%;
+			display: block;
+			font-weight: bold;
+		}
+	}
+
+	&__block {
+		padding-bottom: rem(30);
+	}
+
+
+
+	
+
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) { }
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFact

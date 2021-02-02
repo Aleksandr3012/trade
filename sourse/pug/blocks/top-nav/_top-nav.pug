@@ -21,6 +21,9 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
+				.col.d-md-none
+					+e.logo(href="#")
+						img.res-i(src="img/svg/logo.svg", alt="")
 				.col-auto.d-md-none
 					+b.toggle-menu-mobile--js
 						span

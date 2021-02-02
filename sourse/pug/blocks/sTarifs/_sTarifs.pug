@@ -1,0 +1,89 @@
+mixin sTarifs(data)
+	// start sTarifs
+	+b.SECTION.sTarifs.section#sTarifs&attributes(attributes)
+		+e.bg
+			img(src="img/svg/tarifs-bg.svg", alt="" loading="lazy")
+		.container
+			
+			+e.timer.row.justify-content-between.align-items-center
+				.col-lg-auto
+					+e.start До старта тренинга осталось:
+				.col-lg-auto
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='325')
+			+b.section-title
+				h2 #[span Выберите] Вашу версию участия
+			+e.row.row
+				mixin item(title,privilege,oldPrice,price,link)
+					.col-lg-4
+						+e.item&attributes(attributes)
+							+e.topBlock
+								+e.title= title
+								+e.privilege!= privilege
+							+e.priceWrap
+								+e.STRIKE.oldPrice= oldPrice
+								+e.price= price
+							+e.main
+								block
+								+e.btn(href= link target='_blank') Оформить заказ
+				+item('Стандарт',`Только <strike>20</strike> <strong>9 льготных мест!</strong>`,'33 000 ','19 800','https://info-dvd.ru/bbm/order/cmebig')
+					ul
+						li Серия подготовительных теориетичнских уроков 
+						li 2&nbsp;недели участия в&nbsp;онлайн-тренинге c&nbsp;1-го по&nbsp;12-е марта (6&nbsp;занятий)
+						li Записи всех занятий тренинга (пожизненный доступ)
+						li Домашние задания с&nbsp;обратной связью
+						li #[strong БОНУС:] индикатор SmartOptions на&nbsp;2&nbsp;недели
+						li #[strong БОНУС:] помощь разработчика в&nbsp;установке индикатора
+				+item('Мастер',`Только <strike>47</strike> <strong>7 льготных мест!</strong>`,'47 000','28 200','https://info-dvd.ru/bbm/order/cmebigmaster')
+					ul
+						li Серия подготовительных теориетичнских уроков 
+						li 2&nbsp;недели участия в&nbsp;онлайн-тренинге c&nbsp;1-го по&nbsp;12-е марта (6&nbsp;занятий)
+						li Записи всех занятий тренинга (пожизненный доступ)
+						li Домашние задания с&nbsp;обратной связью
+						li #[strong БОНУС:] индикатор SmartOptions на&nbsp;2&nbsp;недели
+						li #[strong БОНУС:] помощь разработчика в&nbsp;установке индикатора
+						li #[strong 3&nbsp;месяца сопровождения в&nbsp;Мастер-группе после тренинга:] ежедневные ответы на&nbsp;Ваши вопросы, а&nbsp;также групповые онлайн-занятия 1&nbsp;раз в&nbsp;2&nbsp;недели с&nbsp;поддержкой и&nbsp;разбором Ваших сделок
+						li #[strong БОНУС:] безлимитный доступ в&nbsp;Telegram-канал и&nbsp;Telegram-чат с&nbsp;ежедневным анализом рынка и&nbsp;рекомендациями по&nbsp;торговле от&nbsp;автора
+				+item('Коучинг',`Только <strike>47</strike> <strong>7 льготных мест!</strong>`,'69 000','41 400','https://info-dvd.ru/bbm/order/cmebigcoaching').active
+					ul
+						li Серия подготовительных теориетичнских уроков 
+						li 2&nbsp;недели участия в&nbsp;онлайн-тренинге c&nbsp;1-го по&nbsp;12-е марта (6&nbsp;занятий)
+						li Записи всех занятий тренинга (пожизненный доступ)
+						li Домашние задания с&nbsp;обратной связью
+						li #[strong БОНУС:] индикатор SmartOptions на&nbsp;2&nbsp;недели
+						li #[strong БОНУС:] помощь разработчика в&nbsp;установке индикатора
+						li #[strong 3&nbsp;месяца сопровождения в&nbsp;Мастер-группе после тренинга:] ежедневные ответы на&nbsp;Ваши вопросы, а&nbsp;также групповые онлайн-занятия 1&nbsp;раз в&nbsp;2&nbsp;недели с&nbsp;поддержкой и&nbsp;разбором Ваших сделок
+						li #[strong БОНУС:] безлимитный доступ в&nbsp;Telegram-канал и&nbsp;Telegram-чат с&nbsp;ежедневным анализом рынка и&nbsp;рекомендациями по&nbsp;торговле от&nbsp;автора
+						li #[strong Индивидуальный коучинг до&nbsp;результата:] Ваше личное общение с&nbsp;автором продолжается неограниченное время, пока&nbsp;Вы выкладываете отчёты по&nbsp;Вашим сделкам и&nbsp;задаёте вопросы. За&nbsp;2-3 месяца коучинга&nbsp;Вы сможете стать полностью независимым прибыльным трейдером. Отсутствии активности в&nbsp;течение 1&nbsp;недели без уважительных причин лишает Вас права продолжать сопровождение. Результат достигается только в&nbsp;том случае, если&nbsp;Вы практикуетесь и&nbsp;задаёте вопросы.
+						li #[strong БОНУС:] видео-конференции с&nbsp;автором в&nbsp;группах по&nbsp;7-10 человек&nbsp;&mdash; живое общение с&nbsp;подключением камеры и/или микрофона (1&nbsp;раз в&nbsp;2&nbsp;недели на&nbsp;протяжении 3-х месяцев)
+	// end sTarifs
+
+mixin sTarifs-sm(data)
+	// start sTarifs
+	+b.SECTION.sTarifs--sm.section#sTarifs-sm&attributes(attributes)
+		+e.rocket
+			img(src="img/svg/rocket.svg", alt="" loading="lazy")
+		.container
+			h3 <span> Крупные игроки зарабатывают всегда, это факт.<br> А&nbsp;что выберете&nbsp;Вы</span> отдавать им&nbsp;Ваши деньги, как&nbsp;95% трейдеров, или присоединиться к&nbsp;намерениям воротил рынка и&nbsp;получать стабильный высокий доход?
+			+e.timer.row.justify-content-between.align-items-center
+				.col-lg-auto
+					+e.start До старта тренинга осталось:
+				.col-lg-auto
+					//- .time__block
+						//- .idvd_timer.autostart(data-redirect_url='' data-duration_hours='310.1')
+						//- 	.tmr_el
+						//- 		.tmr_el_val 12
+						//- 		.tmr_el_unit дней
+						//- 	.tmr_el
+						//- 		.tmr_el_val 1
+						//- 		.tmr_el_unit часов
+						//- 	.tmr_el
+						//- 		.tmr_el_val 4
+						//- 		.tmr_el_unit минут
+						//- 	.tmr_el
+						//- 		.tmr_el_val 45
+						//- 		.tmr_el_unit секунд
+
+					.time__block
+						.idvd_timer.autostart(data-redirect_url='', data-duration_hours='320.1')
+			+e.btn(href="#") Регистрируйтесь на&nbsp;тренинг и&nbsp;зарабатывайте!

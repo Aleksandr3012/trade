@@ -1,2 +1,37 @@
 mixin footer()
-	footer.footer
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+e.row.row
+				.col-9.col-lg-5
+					+e.publisher-txt
+						p.set-footer-date-js 2008—#[span.year 2020] © издательство Info-DVD.Ru
+						p
+							| Проект
+							|
+							a(href="#") «Инфоклуб»
+						p ОГРНИП 316183200118945
+					+e.NAV.menu
+						ul
+							li: a(href="http://info-dvd.ru/partnership?utm_source=footer_link&utm_medium=sales_letter&utm_campaign=footer_template_link") партнёрская программа
+							li: a(href="http://info-dvd.ru/pages/privacy") политика конфиденциальности
+							li: a(href="http://info-dvd.ru/pages/risk-warning") предупреждение о рисках
+				+e.logo-col.col-3.col-lg-2
+					+e.logo-cont
+						img(src="img/@2x/footer-logo.png" alt="" loading="lazy")
+				.col-lg-5
+					+e.support
+						+e.bold-txt Служба поддержки:
+						+e.inline-links
+							a(href="https://info.support-desk.ru/form")
+								span Задать свой вопрос
+							a.ancor-js(href="#sFAQ")
+								span Частые вопросы и ответы на них
+					+e.callback
+						+e.bold-txt Позвоните нам:
+						+e.inline-links
+							a(href='tel:88005550721') 8 (800) 555-07-21
+							a(href='tel:+74995530974') +7 (499) 553-09-74
+						+e.callback-txt
+								| или
+								|
+								a(href='http://info-dvd.ru/support/apply/') и мы вам перезвоним

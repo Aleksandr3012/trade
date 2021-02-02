@@ -1,0 +1,20 @@
+mixin sRews(data)
+	// start sRews
+	+b.SECTION.sRews.section#sRews&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Что говорят ученики #[span Елены Прониной]
+				
+			+e.slider-wrap
+				+arrow
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						- for (var x = 1; x < 3; x++)
+							+e.slide.swiper-slide
+								a.sTopSlider__img-cont(data-fslightbox='topSliderImgs' href=`img/@2x/2-${x}.png`)
+									picture.sTopSlider__img
+										source.swiper-lazy(data-srcset=`img/@2x/webp/2-${x}.webp` type='image/webp' srcset='#' media="(min-width:576px)")
+										source.swiper-lazy(data-srcset=`img/@1x/webp/2-${x}.webp` type='image/webp' srcset='#')
+										source.swiper-lazy(data-srcset=`img/@2x/2-${x}.png` type='image/webp' srcset='#' media="(min-width:576px)")
+										img.swiper-lazy(data-src=`img/@1x/2-${x}.png` src='#' alt='')
+				.swiper-pagination

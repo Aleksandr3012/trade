@@ -3,7 +3,7 @@ mixin allcss()
 	//- link(rel="stylesheet", href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css")
 	//- link(rel="stylesheet", href="css/main.css")
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
 	link(href="css/main.min.css", rel="stylesheet")
 
 mixin allcjs()
@@ -16,14 +16,16 @@ mixin allcjs()
 	//- script(src="js/lazy.js")
 	
 	//- script(src="js/libs.js")
-
-	//- script(src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js")
+	script(src="js/jquery-2.2.4.min.js")
+	<script src="//infoclub.info/tools/api_subscriber/timer_universal.js?3"></script>
+	script(src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js")
 
 	// modal libs
-	script(src="libs/jquery/jquery.slim.min.js")
+	//- script(src="libs/jquery/jquery.slim.min.js")
 	script(src="libs/@fancyapps/fancybox/jquery.fancybox.min.js")
 	// modal libs
 	// slider libs
+	script(src="libs/fslightbox/index.js")
 	script(src="libs/swiper/js/swiper.min.js")
 	//- script(src="libs/slick-carousel/slick/slick.min.js")
 	// /slider libs

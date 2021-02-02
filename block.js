@@ -18,7 +18,7 @@ const fileSources = {
 	// start {blockName}
 	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title
 				h2 {blockName}
 				
 			.row

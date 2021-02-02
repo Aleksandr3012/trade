@@ -198,7 +198,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '124.jpg';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -229,32 +229,55 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
+	const swiperRew = new Swiper('.sRews__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
+		slidesPerView: 1,
+		spaceBetween: 3000,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
 	});
 	// modal window
+
+	//sQusetions js
+	let qItem = document.querySelectorAll(".q-item-js");
+	qItem.forEach(function (el) {
+		el.addEventListener('click', function () {
+			let allItems = document.querySelectorAll('.q-item-js');
+			let self = this;
+
+			for (let item of allItems) {
+				let currContent = item.querySelector('.q-content-js');
+
+				if (item === self) {
+					item.classList.toggle('active');
+					currContent.classList.toggle('active');
+				}
+				else {
+					item.classList.remove('active');
+					currContent.classList.remove('active');
+				}
+
+			}
+
+		})
+	})
+
+	let videoBtn = document.querySelector(".sVideo .videoBlock:not(.active)");
+	videoBtn.addEventListener('click', function () {
+
+		this.classList.add("active");
+		this.innerHTML += this.dataset.src;
+	})
 
 };
 if (document.readyState !== 'loading') {

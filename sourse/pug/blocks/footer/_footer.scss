@@ -1,6 +1,159 @@
 .footer {
-		
-	margin-top: auto;
+  color: #fff;
+  background: #385B66;
+
+  padding: rem(30) 0 ;
+  @include media-breakpoint-up(lg){
+    padding: rem(65) 0 rem(60) 0;
+  }
+
+  //a
+  a{
+    color: #fff;
+    &:hover{
+      color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+
+
+  &__row{
+    @include roww(37px);
+  }
+  &__publisher-txt{
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg){
+      margin-bottom: rem(53);
+    }
+
+    p{
+      font-size: rem(16px);
+      @include media-breakpoint-up(sm){
+        font-size: rem(20px);
+      }
+      font-weight: 700;
+
+      line-height: 1.25;
+      margin-bottom: 0;
+    }
+
+    a{
+      border-bottom: 1px solid $body-color;
+      &:hover{
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+  &__menu{
+    padding-bottom: rem(30);
+    @include media-breakpoint-up(lg){
+      padding-bottom: 0;
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li{
+        //line-height: (24/16);
+        padding: rem(4) 0;
+      }
+      a{
+        font-size: rem(16px);
+        line-height: 1;
+
+        border-bottom: 1px solid $body-color;
+        &:hover{
+          border-bottom: 1px solid transparent;
+        }
+      }
+    }
+  }
+  //footer logo col
+  &__logo-cont{
+    width: rem(163);
+    max-width: 100%;
+
+    margin-left: auto;
+    @include media-breakpoint-up(lg){
+      padding-top: 25px;
+      margin-left: 0;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      @include media-breakpoint-up(xl){
+        transform: translateX(-40px);
+      }
+    }
+  }
+  &__logo-col{
+    @include media-breakpoint-down(xs){
+      padding: 10px;
+    }
+  }
+  //
+  &__support{
+    padding-bottom: rem(59);
+  }
+  &__bold-txt{
+    font-weight: bold;
+    line-height: (25/20);
+    padding-bottom: rem(14);
+
+    font-size: rem(16px);
+    @include media-breakpoint-up(sm){
+      font-size: rem(20px);
+    }
+  }
+  &__inline-links{
+    a{
+      font-size: rem(16px);
+      line-height: (20/16);
+
+      span{
+        @include mt();
+        border-bottom: 1px solid $body-color;
+      }
+
+      &:hover{
+        span{
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      &:after{
+        content: '| ';
+        display: inline-block;
+        vertical-align: top;
+
+        padding: 0 rem(10px);
+        border-bottom: 1px solid transparent;
+      }
+      &:last-child{
+        padding-right: 0;
+        &:after{
+          content: none;
+        }
+      }
+    }
+  }
+  &__callback{
+
+  }
+
+  &__callback-txt{
+    @include mt();
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      a:hover{
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  &__{}
+  &__{}
+
 
 // 
 @include media-breakpoint-up(xl) {}
