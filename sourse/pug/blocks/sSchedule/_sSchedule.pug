@@ -69,9 +69,9 @@ mixin sSchedule(data)
 				h4 В чём преимущества участия в Мастер-группе:
 			+e.advantages.row
 				mixin advItem(i,t)
-					.col-sm-6.col-lg-3
+					+e.col.col-sm-6.col-lg-3
 						+e.imgWrap
-							img(src=`img/svg/advantages-${i}.svg`, alt="")
+							img(src=`img/svg/advantages-${i}.svg`, alt="" loading="lazy")
 						p!= t
 				+advItem(1,`Вы&nbsp;не&nbsp;останетесь один на&nbsp;один с&nbsp;торговой системой после тренинга. Вас будут вести и&nbsp;помогать`)
 				+advItem(2,`Все Ваши вопросы, которые могут возникнуть в&nbsp;ходе практики после тренинга, подробно разбираются на&nbsp;онлайн-занятиях`)
@@ -82,11 +82,11 @@ mixin sSchedule(data)
 				+e.stage #[span 3 этап:] Индивидуальный Коучинга
 				h5 Индивидуальный Коучинг стартует параллельно с&nbsp;Мастер-группой и&nbsp;не&nbsp;ограничен по времени. Для каждого участника Коучинга создаётся отдельная комната в&nbsp;группе обучения.
 				h4 В&nbsp;чём преимущества участия в&nbsp;Индивидуальном Коучинге:
-			+e.advantages--sm.row
+			+e.advantages--sm.row.justify-content-center
 				mixin advItem(i,t)
 					+e.col.col-sm-6.col-lg-4
 						+e.imgWrap
-							img(src=`img/svg/advantages-${i}.svg`, alt="")
+							img(src=`img/svg/advantages-${i}.svg`, alt="" loading="lazy")
 						p!= t
 				+advItem(5,`Вы&nbsp;остаётесь на&nbsp;связи с&nbsp;автором неограниченное время. Пока Вы&nbsp;активны, Ваше сопровождение продолжается`)
 				+advItem(6,`Ваше общение с&nbsp;автором в&nbsp;индивидуальной комнате не&nbsp;видят другие участники. Вы&nbsp;можете легко обсуждать даже Ваши самые крупные счета или задавать &laquo;глупые&raquo; вопросы.`)
@@ -95,6 +95,6 @@ mixin sSchedule(data)
 			+b.section-title--smPb
 				h2 #[span Готовы выбрать]<br>  Вашу версию участия?
 			+e.btn(href="#") Запишитесь на тренинг
-		+e.bg
+		+e.bg.d-none.d-sm-block
 			img(src="img/svg/schedule-bg.svg", alt="" loading="lazy")
 	// end sSchedule

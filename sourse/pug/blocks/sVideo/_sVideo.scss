@@ -20,11 +20,20 @@
 		border: solid 2px #548E87;
 		backdrop-filter: blur(60px);
 		border-radius: rem(20px);
-		margin-bottom: rem(-150);
 		position: relative;
 		z-index: 2;
-		padding: rem(50) rem(46) rem(40);
+		padding: rem(25);
 		letter-spacing: rem(-0.2);
+
+
+		@include media-breakpoint-up(md) {
+			padding: rem(50) rem(46) rem(40);
+		}
+
+		margin-bottom: rem(-230);
+		@media (min-width:393px) {
+			margin-bottom: rem(-150);
+		}
 
 		h4 {
 			line-height: 150%;
@@ -50,6 +59,11 @@
 		overflow: hidden;
 		@include block(234,234);
 
+		@include media-breakpoint-down(sm) {
+			max-width: 234px;
+			margin: 0 auto rem(20);
+		}
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -59,8 +73,14 @@
 	}
 
 	&__video {
-		padding-top: rem(200);
-		padding-bottom: rem(142);
+		padding-top: rem(280);
+		@media (min-width:393px) {
+			padding-top: rem(200);
+		}
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xxl) {
+			padding-bottom: rem(142);
+		}
 		position: relative;
 
 		&::before {
@@ -93,8 +113,11 @@
 	@include media-breakpoint-down(xl) {}
 
 	&--02 {
-		--sTPB: #{rem(50)};
-		padding-bottom: calc(var(--sPB) * 1.18);
+		padding-bottom: calc(var(--sPB) / 3);
+		@include media-breakpoint-up(lg) {
+			--sTPB: #{rem(50)};
+			padding-bottom: calc(var(--sPB) * 1.18);
+		}
 		h2 {
 			color: $body-color;
 
@@ -111,9 +134,14 @@
 	&--03 {
 		--sPT: #{rem(50)};
 		.sVideo__video {
-			padding-top: rem(65);
-			padding-bottom: rem(82);
-
+			
+			padding-top: rem(25);
+			@include media-breakpoint-up(lg) {
+				padding-top: rem(65);
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-bottom: rem(82);
+			}
 			&::before {
 				@include media-breakpoint-up(xxl) {
 					width: 1272px;
@@ -177,15 +205,22 @@
 		@include a-cent;
 		z-index: 10;
 		background: #EB6504;
-		width: rem(112px);
-		height: rem(112px);
+		width: rem(70px);
+		height: rem(70px);
+		@include media-breakpoint-up(md) {
+			width: rem(112px);
+			height: rem(112px);
+		}
 		border-radius: 50%;
 		display: grid;
 		place-items: center;
 
 		.icon {
 			@include mt;
-			font-size: rem(42);
+			font-size: rem(30);
+			@include media-breakpoint-up(md) {
+				font-size: rem(42);
+			}
 			color: #fff;
 		}
 	}

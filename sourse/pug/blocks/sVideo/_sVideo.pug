@@ -14,7 +14,7 @@ mixin sVideo(data)
 				+b.section-title
 					h2 Рост #[span в 27 раз (!)] за 4 месяца:
 				+b.videoBlock(data-src=`<iframe src="https://player.vimeo.com/video/505625737?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`)
-					+pic('video-img.jpg','','')
+					+pic('video-img.jpg','bg')
 					+e.iconWrap
 						+icon('play')
 	// end sVideo
@@ -27,20 +27,20 @@ mixin sVideo2(data)
 			+b.section-title
 				h2 За 15 месяцев на одном из счетов Елены заработан  #[span 1 000 000 рублей!]
 			+b.videoBlock(data-src=`<iframe src="https://player.vimeo.com/video/454379996?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`)
-				+pic('video-img-2.jpg','','')
+				+pic('video-img-2.jpg','bg')
 				+e.iconWrap
 					+icon('play')
 
 mixin sVideo3(data)
 	// start sVideo
 	+b.SECTION.sVideo--03.section#sVideo3&attributes(attributes)
-		+e.bg
+		+e.bg.d-none.d-sm-block
 			img(src="img/svg/video-bg.svg", alt="" loading="lazy")
 		.container
 			+e.video
 				+b.section-title
 					h2 Мы&nbsp;встретились и&nbsp;записали #[span живое интервью с&nbsp;Еленой,] чтобы&nbsp;Вы могли узнать максимум подробностей об авторе и&nbsp;её&nbsp;системе
 				+b.videoBlock(data-src=`<iframe src="https://player.vimeo.com/video/454379996?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`)
-					+pic('video-img-3.jpg','','')
+					+pic('video-img-3.jpg','bg')
 					+e.iconWrap
 						+icon('play')

@@ -18,8 +18,12 @@
 		li {
 			position: relative;
 			color: #303435;
-			padding-left: rem(30);
-			padding-bottom: rem(35);
+			padding-left: rem(20);
+			padding-bottom: rem(10);
+			@include media-breakpoint-up(md) {
+				padding-left: rem(30);
+				padding-bottom: rem(35);
+			}
 			line-height: 150%;
 			@extend .h4;
 

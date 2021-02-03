@@ -18,9 +18,14 @@
 	}
 
 	&__imgWrap {
+		max-width: 350px;
+		margin: 0 auto;
 		@include block(344,344);
 		border-radius: rem(20);
 		overflow: hidden;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(20);
+		}
 
 		img {
 			width: 100%;
@@ -37,14 +42,19 @@
 	&__rowWrap {
 		&:not(:last-child) {
 			border-bottom: solid 11px #fff;
-			margin-bottom: rem(80);
-
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(86);
+			}
 			.row {
-				padding-bottom: rem(80);
+				padding-bottom: rem(40);
+				@include media-breakpoint-up(lg) {
+					padding-bottom: rem(86);
+				}
 			}
 		}
 
-		&:nth-child(odd) {
+		&:nth-child(even) {
 			.row {
 				flex-direction: row-reverse;
 			}
@@ -79,9 +89,13 @@
 	&__forParticipants {
 		background-color: #fff;
 		display: inline-block;
-		padding: rem(5) rem(15);
 		border-radius: rem(10px);
 		font-weight: 600;
+		padding: rem(5);
+		line-height: 150%;
+		@include media-breakpoint-up(sm) {
+			padding: rem(5) rem(15);
+		}
 		font-size: $h4-font-size;
 		letter-spacing: rem(-0.4);
 

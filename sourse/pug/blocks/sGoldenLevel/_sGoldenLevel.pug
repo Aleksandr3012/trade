@@ -3,16 +3,15 @@ mixin sGoldenLevel()
 	+b.SECTION.sGoldenLevel.section#sGoldenLevel&attributes(attributes)
 		+e.bg
 		.container
-			.row
-				.col-lg-auto.order-lg-first.mb-3
+			+b.section-title 
+				h2
+					| &laquo;Золотой уровень доверия&raquo;&nbsp;&mdash; 
+					span стандартная надёжность 
+			+e.row.row
+				.col-lg-auto.order-lg-first
 					+pic("goldLevel-img.png")
 				.col
-					+b.section-title 
-						h2
-							| &laquo;Золотой уровень доверия&raquo;&nbsp;&mdash; 
-							span стандартная надёжность 
 							
-
 					+e.txt
 						h4 &laquo;Золотым уровнем доверия&raquo; помечаются &laquo;классические&raquo; обучающие курсы/программы от&nbsp;нашего издательства. Те&nbsp;курсы, тренинги, мультикурсы, которые&nbsp;Вы и&nbsp;раньше приобретали у&nbsp;нас и&nbsp;которые, собственно, завоевали для нашего издательства столь высокую репутацию!
 

@@ -1,7 +1,12 @@
 // start .sTarifs
 .sTarifs {
 	position: relative;
+	padding-bottom: calc(var(--sPB) / 2);
 	z-index: 3;
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 1.1);
+	}
 
 	&__bg {
 		position: absolute;
@@ -29,6 +34,8 @@
 	&__start {
 		@include rfs(40px);
 		font-weight: 900;
+		line-height: 122%;
+		padding-bottom: 15px;
 	}
 
 	&__timer {
@@ -47,11 +54,12 @@
 
 	&__topBlock {
 		background: #385B66;
-		padding: rem(15) rem(25);
+		padding: rem(20) rem(25) rem(15);
 	}
 
 	&__title {
 		@extend .h3;
+		margin-bottom: rem(11);
 		font-weight: 800;
 		color: #BDDAA5;
 	}
@@ -64,26 +72,28 @@
 	&__priceWrap {
 		background: #CED7DA;
 		text-align: center;
-		padding: rem(10);
+		padding: rem(8);
 	}
 
 	&__oldPrice {}
 
 	&__price {
 		@extend .h3;
-		line-height: 1;
+		line-height: 0.5;
+		margin-bottom: rem(15);
 		color: #EB6504;
 		font-weight: 800;
 	}
 
 	&__main {
-		padding: rem(22) rem(24) rem(32);
+		padding: rem(24) rem(24) rem(32);
 	}
 
 	&__item {
 		background: #F5F5F5;
 		border-radius: 10px;
 		overflow: hidden;
+		margin-bottom: rem(25);
 
 		&.active {
 			background: #548E87;
@@ -96,7 +106,7 @@
 				}
 			}
 
-			.priceWrap {
+			.sTarifs__priceWrap {
 				background: #303435;
 			}
 		}
@@ -105,19 +115,20 @@
 
 	ul {
 		list-style: none;
+		margin-bottom: rem(9);
 
 		li {
 			position: relative;
 			padding-left: rem(27);
 			font-size: 14px;
-			padding-bottom: rem(15);
+			padding-bottom: rem(12);
 			line-height: 170%;
 
 			&::before {
 				content: '';
 				position: absolute;
-				left: 0;
-				top: rem(5);
+				left: rem(3);
+				top: rem(8);
 				width: 7px;
 				height: 7px;
 				border-radius: 50%;
@@ -133,10 +144,25 @@
 	@include media-breakpoint-down(xl) {}
 
 	&--sm {
+		padding-top: calc(var(--sPT) * 1.4);
+		padding-bottom: calc(var(--sPB) * 1.65);
+
 		.sTarifs__btn {
 			display: inline-block;
 		}
+
+		.sTarifs__timer {
+			padding-bottom: rem(27);
+		}
+		
+		h3 {
+			font-weight: 800;
+			line-height: 140%;
+			max-width: 1016px;
+			margin-bottom: rem(40);
+		}
 	}
+
 
 } // end.sTarifs
 
@@ -146,6 +172,11 @@
 	.idvd_timer {
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-up(xl) {
+			width: rem(405px);
+			padding-top: rem(17);
+			justify-content: space-between;
+		}
 	}
 
 	.tmr_el{
@@ -157,16 +188,17 @@
 			content: ':';
 			position: absolute;
 			left: 100%;
-			top: 0;
+			@include a-cent(y);
+			padding-bottom: 33px;
 			height: auto;
 			width: rem(18);
-
-			//
 			display: flex;
 			text-align: center;
 			justify-content: center;
 			align-items: center;
 			//font-family: $gotham-pro;
+			font-weight: 900;
+			line-height: 122%;
 			font-size: rem(40);
 			color: $body-color;
 		}
@@ -177,10 +209,13 @@
 
 		.tmr_el_val {
 			// text-align: right;
-			width: 72px;
+			@include media-breakpoint-up(lg) {
+				width: 87px;
+			}
 			color: #fff;
-			padding-left: 5px;
-			letter-spacing: rem(18);
+			padding-left: 9px;
+			letter-spacing: rem(25);
+			margin-bottom: rem(6);
 			&::before, &::after {
 				content: '';
 				position: absolute;

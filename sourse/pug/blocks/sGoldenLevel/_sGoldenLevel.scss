@@ -1,6 +1,10 @@
 // start .sGoldenLevel
 .sGoldenLevel {
-	--sTPB: #{rem(10)};
+	padding-top: calc(var(--sPB) / 1.2);
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 1.1);
+	}
 	.h5{
 		font-weight: 600;
 	}
@@ -12,11 +16,29 @@
 		}
 	}
 
-	.btn{
-		max-width: rem(460);
-		height: rem(64);
-		font-size: rem(20);
+	h4 {
+		line-height: 150%;
 	}
+
+	&__txt {
+		padding-top: rem(25);
+		padding-bottom: rem(30);
+		margin-bottom: rem(30);
+		border-bottom: 11px solid #FFFFFF;
+		@include media-breakpoint-up(lg) {
+			max-width: 620px;
+		}
+	}
+
+	p {
+		line-height: 170%;
+		margin-bottom: rem(43);
+	}
+
+	&__row {
+		padding-bottom: rem(7);
+	}
+
 	@include media-breakpoint-up(xl) {
 		.row{
 			--bs-gutter-x: 53px;

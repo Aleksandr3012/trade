@@ -1,7 +1,10 @@
 // start .sFeatures
 .sFeatures {
 	--sPT: 0;
-	padding-bottom: calc(var(--sPB) * 2.95);
+
+	@include media-breakpoint-up(sm) {
+		padding-bottom: calc(var(--sPB) * 2.95);
+	}
 	position: relative;
 	z-index: 5;
 
@@ -43,10 +46,11 @@
 		overflow: hidden;
 		border-radius: rem(20);
 		padding: rem(20);
+		margin-bottom: rem(45);
 		@include media-breakpoint-up(md) {
 			padding: rem(40) rem(45) rem(30);
+			margin-bottom: rem(75);
 		}
-		margin-bottom: rem(75);
 		filter: drop-shadow(0px 26px 46px rgba(0, 0, 0, 0.17));
 
 		@include media-breakpoint-up(md) {
@@ -81,10 +85,10 @@
 				content: '';
 				position: absolute;
 				height: 1px;
-				width: 102%;
+				width: 111%;
 				background: #CED7DA;
 				bottom: 0;
-				left: -1px;
+				left: -10%;
 			}
 		}
 	}
@@ -94,9 +98,14 @@
 		padding-left: 0;
 		@extend .row;
 		@include roww(40px);
-		padding-top: rem(45);
-		padding-bottom: rem(72);
+		padding-bottom: rem(0);
+		padding-top: rem(30);
 
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(72);
+			padding-top: rem(45);
+
+		}
 
 		li {
 			list-style: none;
@@ -105,14 +114,23 @@
 			font-weight: 600;
 			@extend .col-lg-4;
 
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(40);
+			}
+
 			&::before {
 				counter-increment: myCounter;
 				content:counter(myCounter);
 				color: rgba($color: #385B66, $alpha: 0.1);
-				font-size: rem(174.545px);
 				position: absolute;
-				left: -5px;
-				top: -85px;
+				font-size: rem(154.545px);
+				left: 5px;
+				top: -55px;
+				@include media-breakpoint-up(lg) {
+					top: -85px;
+					left: -5px;
+					font-size: rem(174.545px);
+				}
 				font-weight: 900;
 				line-height: 122.5%;
 
@@ -186,11 +204,13 @@
 	}
 
 	&__tools {
-		padding-top: rem(50);
-		padding-bottom: rem(100);
+		padding-top: rem(20);
+		padding-bottom: rem(50);
 		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(100);
 			@include roww(35px);
 			padding-bottom: rem(167);
+			padding-top: rem(50);
 		}
 
 		picture {
@@ -198,7 +218,10 @@
 			align-items: center;
 			max-width: 195px;
 			height: rem(64);
-			margin-bottom: rem(33);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(33);
+			}
 		}
 
 		p {

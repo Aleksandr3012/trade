@@ -10,6 +10,7 @@
 	background-position: center 0;
 	opacity: 0;
 	// opacity: 0.7;
+	// filter: invert(1);
 } 
 
 body,
@@ -482,6 +483,11 @@ iframe {
 
 
 .swiper-pagination {
+
+	.swiper-pagination-bullet {
+		width: 18px;
+		height: 18px;
+	}
 	.swiper-pagination-bullet-active {
 		background-color: $primary;
 	}

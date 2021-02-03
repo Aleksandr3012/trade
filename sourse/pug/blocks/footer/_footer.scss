@@ -20,19 +20,17 @@
     @include roww(37px);
   }
   &__publisher-txt{
-    margin-bottom: rem(30);
-    @include media-breakpoint-up(lg){
-      margin-bottom: rem(53);
-    }
+    margin-bottom: rem(32);
+
 
     p{
       font-size: rem(16px);
       @include media-breakpoint-up(sm){
         font-size: rem(20px);
       }
-      font-weight: 700;
+      font-weight: 600;
 
-      line-height: 1.25;
+      line-height: 1.6;
       margin-bottom: 0;
     }
 
@@ -54,7 +52,8 @@
       margin: 0;
       li{
         //line-height: (24/16);
-        padding: rem(4) 0;
+        // padding: rem(4) 0;
+        line-height: 1.6;
       }
       a{
         font-size: rem(16px);
@@ -95,9 +94,9 @@
     padding-bottom: rem(59);
   }
   &__bold-txt{
-    font-weight: bold;
+    // font-weight: bold;
     line-height: (25/20);
-    padding-bottom: rem(14);
+    padding-bottom: rem(5);
 
     font-size: rem(16px);
     @include media-breakpoint-up(sm){
@@ -107,7 +106,7 @@
   &__inline-links{
     a{
       font-size: rem(16px);
-      line-height: (20/16);
+      line-height: 1.4;
 
       span{
         @include mt();

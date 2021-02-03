@@ -1,7 +1,7 @@
 // start .headerBlock
 .headerBlock {
 	--sPB: #{rem(50)};
-	--sPT: #{rem(80)};
+	--sPT: #{rem(90)};
 	--sTPB: #{rem(25)};
 	@include media-breakpoint-up(md) {
 		--sTPB: #{rem(73)};
@@ -43,16 +43,25 @@
 	&__block {
 		position: relative;
 		z-index: 2;
-		background: linear-gradient(114.87deg, rgba(56, 91, 102, 0.73) 24.29%, rgba(79, 130, 123, 0.68) 45.36%, rgba(255, 255, 255, 0.39) 68.78%);
 		border: solid 2px #548E87;
 		backdrop-filter: blur(8px);
 		border-radius: 20px;
-		padding: rem(37) rem(57) rem(62);
+		background: linear-gradient(114.87deg, rgba(56, 91, 102, 0.73) 24.29%, rgba(79, 130, 123, 0.68) 45.36%, rgba(255, 255, 255, 0.39) 90.78%);
+		padding: rem(10);
+		@include media-breakpoint-up(md) {
+			padding: rem(37) rem(57) rem(62);
+		}
+		@include media-breakpoint-up(lg) {
+			background: linear-gradient(114.87deg, rgba(56, 91, 102, 0.73) 24.29%, rgba(79, 130, 123, 0.68) 45.36%, rgba(255, 255, 255, 0.39) 68.78%);
+		}
 	}
 
 	h5 {
 		max-width: 630px;
-		margin-bottom: rem(43);
+		margin-bottom: rem(23);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(43);
+		}
 		color: #ffffff;
 		font-weight: bold;
 		line-height: 1.6;
@@ -64,9 +73,12 @@
 
 	&__phone {
 		@include media-breakpoint-down(lg) {
-			margin-top: rem(-50);
+			margin-top: rem(-110);
 			margin-bottom: rem(-230);
 			margin-right: rem(-20);
+		}
+		@include media-breakpoint-only(sm) {
+			margin-bottom: rem(-110);
 		}
 		@include media-breakpoint-up(lg) {
 			position: absolute;

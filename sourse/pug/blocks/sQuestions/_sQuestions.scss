@@ -1,16 +1,12 @@
 // start .sQuestions
 .sQuestions {
 	@include media-breakpoint-up(lg){
-		--sPT: #{rem(38px)};
-		--sPB: #{rem(150)};
-		--sTPB: #{rem(49px)};
+		--sTPB: #{rem(52px)};
+
+		padding-top: calc(var(--sPT) * 1.1);
 	}
 
-	.container{
-		@include media-breakpoint-up(xl){
-			padding-left: 10px;
-		}
-	}
+	padding-bottom: calc(var(--sPB) * 1.2);
 
 
 	&__items{
@@ -31,11 +27,11 @@
 				}
 			}
 		}
-		border-radius: rem(30px);
+		border-radius: rem(20px);
 
-		margin-bottom: rem(22);
+		margin-bottom: rem(16);
 		&.active{
-			margin-bottom: rem(36);
+			margin-bottom: rem(25);
 			background: linear-gradient(118.61deg, #385B66 6.26%, #548E87 118.71%);
 			color: #fff;
 			.sQuestions__circle{
@@ -55,7 +51,11 @@
 		}
 	}
 	&__header{
-	padding: rem(17) rem(30);
+		line-height: 150%;
+		padding: rem(10) rem(15);
+		@include media-breakpoint-up(sm) {
+		padding: rem(15) rem(30);
+	}
 	@include rfs(24px);
 	font-weight: 600;
 	// color: #ffffff;
@@ -75,6 +75,9 @@
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		right: rem(22);
+		@include media-breakpoint-up(lg) {
+			right: rem(32);
+		}
 
 	}
 	}
@@ -86,7 +89,13 @@
 		// transition: 0.6s;
 		transform: translate(0, -100%);
 		border-radius: 10px;
-		padding: rem(17) rem(30);
+		padding: rem(5) rem(15) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(5) rem(30) rem(27);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(5) rem(120) rem(27) rem(30);
+		}
 		&.active{
 			display: block;
 			visibility: visible;
@@ -100,7 +109,7 @@
 		}
 
 		p{
-			line-height: 1.7;
+			line-height: 170%;
 
 			font-size: rem(18px);
 			margin-bottom: rem(20);
