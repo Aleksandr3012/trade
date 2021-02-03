@@ -70,32 +70,6 @@ var JSCCommon = {
 		}
 	},
 	// /mobileMenu
-	// tabs  .
-	tabscostume: function tabscostume(tab) {
-		var tabs = {
-			Btn: [].slice.call(document.querySelectorAll(".tabs__btn")),
-			BtnParent: [].slice.call(document.querySelectorAll(".tabs__caption")),
-			Content: [].slice.call(document.querySelectorAll(".tabs__content"))
-		};
-		tabs.Btn.forEach(function (element, index) {
-			element.addEventListener('click', function () {
-				if (!element.classList.contains('active')) {
-					var siblings = element.parentNode.querySelector(".tabs__btn.active");
-					var siblingsContent = tabs.Content[index].parentNode.querySelector(".tabs__content.active");
-					siblings.classList.remove('active');
-					siblingsContent.classList.remove('active');
-					element.classList.add('active');
-					tabs.Content[index].classList.add('active');
-				}
-			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
-	},
-	// /tabs
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
@@ -139,7 +113,6 @@ function eventHandler() {
 	var _defaultSl;
 
 	JSCCommon.ifie();
-	JSCCommon.tabscostume('.tabs--js');
 	JSCCommon.mobileMenu();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 

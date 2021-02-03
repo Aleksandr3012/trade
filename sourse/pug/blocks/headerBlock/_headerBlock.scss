@@ -31,6 +31,10 @@
 		@extend .btn-primary;
 		position: relative;
 		z-index: 5;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			max-width: 400px;
+		}
 	}
 
 	&__bg {
@@ -47,7 +51,7 @@
 		backdrop-filter: blur(8px);
 		border-radius: 20px;
 		background: linear-gradient(114.87deg, rgba(56, 91, 102, 0.73) 24.29%, rgba(79, 130, 123, 0.68) 45.36%, rgba(255, 255, 255, 0.39) 90.78%);
-		padding: rem(10);
+		padding: rem(10) rem(10) rem(20);
 		@include media-breakpoint-up(md) {
 			padding: rem(37) rem(57) rem(62);
 		}
