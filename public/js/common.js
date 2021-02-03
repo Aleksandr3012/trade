@@ -13,7 +13,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var JSCCommon = {
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
+	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js, .navMenu__link")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	// /modalCall
@@ -115,15 +115,7 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.mobileMenu();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile(); 
-
-	var x = window.location.host;
-	var screenName;
-	screenName = '124.jpg';
-
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
-	}
+	JSCCommon.animateScroll();
 
 	function whenResize() {
 		var topH = document.querySelector("header ").offsetHeight;
@@ -150,7 +142,7 @@ function eventHandler() {
 	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
 	var swiperRew = new Swiper('.sRews__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
-		spaceBetween: 3000,
+		spaceBetween: 200,
 		navigation: {
 			nextEl: '.sRews .swiper-button-next',
 			prevEl: '.sRews .swiper-button-prev'
@@ -159,6 +151,20 @@ function eventHandler() {
 			el: '.sRews .swiper-pagination',
 			type: 'bullets',
 			clickable: true
+		},
+		breakpoints: {
+			576: {
+				spaceBetween: 576
+			},
+			768: {
+				spaceBetween: 768
+			},
+			992: {
+				spaceBetween: 1100
+			},
+			2000: {
+				spaceBetween: 3000
+			}
 		}
 	})); // modal window
 	//sQusetions js

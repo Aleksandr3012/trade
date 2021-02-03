@@ -213,14 +213,17 @@
 				width: 87px;
 			}
 			color: #fff;
-			padding-left: 9px;
-			letter-spacing: rem(25);
+			// padding-left: 9px;
+
+			// letter-spacing: rem(25);
+			text-align: right;
+			text-align: center;
 			margin-bottom: rem(6);
-			&::before, &::after {
+			&::before {
 				content: '';
 				position: absolute;
 				top: 0;
-				width: 45%;
+				width: 100%;
 				height: 100%;
 				border-radius: 10px;
 				z-index: -1;
@@ -230,9 +233,6 @@
 				left: 0;
 			}
 
-			&::after {
-				right: 0;
-			}
 		}
 
 		&:nth-child(1) {
