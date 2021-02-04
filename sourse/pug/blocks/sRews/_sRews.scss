@@ -18,10 +18,7 @@
 	}
 
 	&__slider {
-		max-width: 80%;
-		@include media-breakpoint-up(md) {
-			max-width: 90%;
-		}
+		max-width: 90%;
 	}
 
 	&__more{
