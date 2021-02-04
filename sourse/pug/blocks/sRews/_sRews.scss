@@ -91,11 +91,11 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {
 		.swiper-button-next {
-			right: -5px;
+			right: -10px;
 		}
 
 		.swiper-button-prev {
-			left: -5px;
+			left: -10px;
 		}
 	}
 
