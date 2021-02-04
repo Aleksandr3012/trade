@@ -142,6 +142,7 @@ function eventHandler() {
 	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
 	var swiperRew = new Swiper('.sRews__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
+		autoHeight: true,
 		spaceBetween: 200,
 		navigation: {
 			nextEl: '.sRews .swiper-button-next',

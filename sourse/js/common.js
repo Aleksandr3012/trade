@@ -127,6 +127,7 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		slidesPerView: 1,
+		autoHeight: true,
 		spaceBetween: 200,
 		navigation: {
 			nextEl: '.sRews .swiper-button-next',
