@@ -80,9 +80,6 @@
 	.swiper-container {
 		overflow: visible;
 	}
-	.swiper-wrapper {
-		align-items: center;
-	}
 
 
 	@include media-breakpoint-up(sm) {}
@@ -94,11 +91,11 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {
 		.swiper-button-next {
-			right: 0;
+			right: -5px;
 		}
 
 		.swiper-button-prev {
-			left: 0;
+			left: -5px;
 		}
 	}
 

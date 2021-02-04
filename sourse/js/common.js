@@ -138,20 +138,20 @@ function eventHandler() {
 			type: 'bullets',
 			clickable: true,
 		},
-		breakpoints: {
-			576: {
-				spaceBetween: 576
-			},
-			768: {
-				spaceBetween: 768
-			},
-			992: {
-				spaceBetween: 1100
-			},
-			2000: {
-				spaceBetween: 3000
-			}
-		},
+		// breakpoints: {
+		// 	576: {
+		// 		spaceBetween: 576
+		// 	},
+		// 	768: {
+		// 		spaceBetween: 768
+		// 	},
+		// 	992: {
+		// 		spaceBetween: 1100
+		// 	},
+		// 	2000: {
+		// 		spaceBetween: 3000
+		// 	}
+		// },
 	});
 	// modal window
 

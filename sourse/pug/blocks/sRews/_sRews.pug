@@ -13,8 +13,8 @@ mixin sRews(data)
 							+e.slide.swiper-slide
 								a.sTopSlider__img-cont(data-fslightbox='topSliderImgs' href=`img/@2x/2-${x}.png`)
 									picture.sTopSlider__img
-										source.swiper-lazy(data-srcset=`img/@2x/webp/2-${x}.webp` type='image/webp' srcset='#' media="(min-width:576px)")
-										source.swiper-lazy(data-srcset=`img/@1x/webp/2-${x}.webp` type='image/webp' srcset='#')
-										source.swiper-lazy(data-srcset=`img/@2x/2-${x}.png` type='image/webp' srcset='#' media="(min-width:576px)")
-										img.swiper-lazy(data-src=`img/@1x/2-${x}.png` src='#' alt='')
+										source(srcset=`img/@2x/webp/2-${x}.webp` type='image/webp' media="(min-width:576px)")
+										source(srcset=`img/@1x/webp/2-${x}.webp` type='image/webp')
+										source(srcset=`img/@2x/2-${x}.png` type='image/webp' media="(min-width:576px)")
+										img(src=`img/@1x/2-${x}.png` alt='')
 			.swiper-pagination
