@@ -305,10 +305,12 @@ ul {
 
 	// --swiperArrowPosition: -15px; 
 	&-next {
+		
 		right: var(--swiperArrowPosition);
 	}
 
 	&-prev {
+		
 		left: var(--swiperArrowPosition);
 	}
 }

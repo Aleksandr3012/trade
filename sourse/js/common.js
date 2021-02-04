@@ -1,6 +1,6 @@
 
 const JSCCommon = {
-	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js, .navMenu__link")),
+	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js, .menu-mobile--js ul li a")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 
@@ -71,9 +71,9 @@ const JSCCommon = {
 	},
 	animateScroll() {
 
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', " .top-nav li a, .scroll-link, .menu-mobile--js ul li a", function () {
 			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
+			const destination = $(elementClick).offset().top-60;
 
 			$('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -178,12 +178,16 @@ function eventHandler() {
 		})
 	})
 
-	let videoBtn = document.querySelector(".sVideo .videoBlock:not(.active)");
-	videoBtn.addEventListener('click', function () {
 
-		this.classList.add("active");
-		this.innerHTML += this.dataset.src;
+	let videoBtn = document.querySelectorAll(".sVideo .videoBlock:not(.active)");
+	videoBtn.forEach(function(ell){
+		ell.addEventListener('click', function () {
+
+			this.classList.add("active");
+			this.innerHTML += this.dataset.src;
+		})
 	})
+
 
 };
 if (document.readyState !== 'loading') {
